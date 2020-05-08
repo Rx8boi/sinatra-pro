@@ -1,8 +1,8 @@
 # Sinatra::Proj
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sinatra/proj`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is for all those that need to get started in the Marvel Cinematic Universe and would love to track their favorite (or all characters) journeys throughout the 10 year epic. It is here to help you chronologically follow the 20+ epic so far, journaling each character, each movie & plot twist along the way!
 
-TODO: Delete this and the text above, and describe your gem
+Hope you enjoy!
 
 ## Installation
 
