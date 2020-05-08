@@ -1,0 +1,16 @@
+
+
+<h1> Edit the Hero's Journey! </h1>
+
+<form method="POST" action="/movies/<%= @movie.id %>">
+	<input type="hidden" id="hidden" name="_method" value="PATCH">
+
+	<select name="user_id">
+		<% @heroes.each do |hero| %>
+		<option value="<% hero.id%>"> <%= hero.name %></option>
+		<%end%>
+	</select><br></br>
+
+
+
+</form>
