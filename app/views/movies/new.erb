@@ -1,0 +1,17 @@
+
+
+
+<h1> Add to the Hero's Journey! </h1>
+
+<form method="POST" action="/movies">
+		<select name="hero_id">
+		<% @heroes.each do |hero| %>
+		<option value="<% hero.id%>"> <%= hero.name %></option>
+		<%end%>
+	</select><br></br>
+
+	Movie: <input type="text" name="name"><br></br>
+	Hero's Journey: <textarea name="hero_journey"></textarea><br></br>
+	<input type="submit">
+
+</form>
