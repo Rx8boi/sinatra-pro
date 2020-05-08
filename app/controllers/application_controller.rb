@@ -23,11 +23,17 @@ class ApplicationController < Sinatra::Base
   			@hero ||= Hero.find_by(id: session[:hero_id])
   		end
 
+  		def redirect_if_not_logged_in
+  			if !logged_in?
+  				redirect '/login'
+  			end
+  		end
 
-
-
-
-
+  		def redirect_if_logged_in
+  			if logged_in?
+  				redirect '/movies'
+  			end
+  		end
   	end
 
 end
