@@ -22,7 +22,7 @@ class MoviesController < ApplicationController
 		if movie.save
 			redirect "/movies/#{movie.id}"
 		else
-			redirect 'movies/new'
+			redirect '/movies/new'
 		end
 	end
 
