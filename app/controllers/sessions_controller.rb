@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
  			redirect "/movies"
  		else
  			redirect "/login"
+ 		end
  	end
 
  	get '/logout' do

@@ -6,6 +6,7 @@
 
 <html>
 <head>
+  <header><img src="images/mcu.png" class="img-responsive main-image" style="width:1000px"></header>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
@@ -33,7 +34,7 @@ body {
 }
 
 .topnav a.active {
-  background-color: #002FFF;
+  background-color: #F91010;
   color: white;
 }
 </style>
@@ -46,12 +47,14 @@ body {
   <% if logged_in? %>
   <a href="/logout">Log Out</a>
   <a href="/movies">Welcome <%= current_hero.name %></a>
+  <% else %>
+  <a href="/heroes/signup"> Sign Up </a>
   <% end %>
 </div>
 
 <div style="padding-left:16px">
   <h2>Marvel Movie Girlfriend Helper</h2>
-  <p>Some content..</p>
+  <p>The Marvel Cinematic Universe (MCU) is an amazing feat of Blockbuster porportions! First of all it's a media franchise and shared universe centered on a series of superhero films, independently produced by Marvel Studios and based on characters that appear in.. you guessed it Marvel Comics. Now for the true believers there's much more than the films that come out every year. There are tie-in comics, shorts, tv shows & common lore. The shared universe, much like the original Marvel Universe in comic books, was established by crossing over common plot elements, settings, cast, and characters. Which brings us to the purpose of our application. To help you chronologically follow the 20+ epic so far, journaling each character, each movie & plot twist along the way!</p>
 </div>
 
     <div class="wrapper">
