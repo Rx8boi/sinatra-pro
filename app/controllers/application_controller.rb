@@ -9,5 +9,19 @@ class ApplicationController < Sinatra::Base
     set :session_secret
   end
 
+  	get '/' do				#this is main/front page. Change to to get '/home'?
+  		redirect_if_logged_in
+  		redirect '/login'
+  	end
+
+  	helpers do
+
+
+
+
+
+
+
+  	end
 
 end
