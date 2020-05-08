@@ -45,8 +45,10 @@ body {
   <a class="active" href="/">Home</a>
   
   <% if logged_in? %>
-  <a href="/logout">Log Out</a>
-  <a href="/movies">Welcome <%= current_hero.name %></a>
+   <a href="/movies">Welcome <%= current_hero.name %></a>
+   <a href="/movies/new">Add Movie</a>
+   <a href="/logout">Log Out</a>
+   
   <% else %>
   <a href="/heroes/signup"> Sign Up </a>
   <% end %>
