@@ -1,10 +1,7 @@
 class Hero < ActiveRecord::Base
 has_many :movies
 has_secure_password
-
-
-validates :name, :bio, presence: true #<= Cant create blank heroes
-
+validates :name, :bio, :secret_identity, presence: true #<= Cant create blank heroes
 #cant create same hero profile
-validates :name, uniqueness: true 
+validates :secret_identity, uniqueness: true 
 end

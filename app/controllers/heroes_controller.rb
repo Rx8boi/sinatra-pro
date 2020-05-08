@@ -9,7 +9,6 @@ class HeroesController < ApplicationController
 
 	#create & save
 	post '/heroes' do
-		binding.pry
 		@hero = Hero.new(params)
 		if @hero && @hero.save #if hero is created and saved => session setting
 		session[:hero_id] = @hero.id #logs them in already no re-route to log in screen

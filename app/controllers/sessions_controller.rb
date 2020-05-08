@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
  
  	post '/login' do
  		hero = Hero.find_by(name: params[:name])
- 		if user && user.authenticate(params[:secret_identity])
+ 		if hero && hero.authenticate(params[:secret_identity])
  			session[:hero_id] = hero.id 
  			redirect "/movies"
  		else

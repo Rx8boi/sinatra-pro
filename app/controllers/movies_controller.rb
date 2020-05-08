@@ -20,7 +20,7 @@ class MoviesController < ApplicationController
 	post '/movies' do
 		movie = Movie.new(params)
 		if movie.save
-			redirect "/posts/#{movie.id}"
+			redirect "/movies/#{movie.id}"
 		else
 			redirect 'movies/new'
 		end
@@ -28,7 +28,7 @@ class MoviesController < ApplicationController
 
 	#edit needs to come before id route
 
-	get '/posts/:id/edit' do
+	get '/movies/:id/edit' do
 		redirect_if_not_logged_in
 		@heroes = Hero.all
 		@movie = Movie.find_by_id(params[:id])
