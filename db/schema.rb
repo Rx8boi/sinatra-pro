@@ -11,6 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20200508064540) do
+
+  create_table "heros", force: :cascade do |t|
+    t.string "name"
+    t.text   "bio"
+    t.string "secret_identity"
+  end
+
+  create_table "movie", force: :cascade do |t|
+    t.string  "name"
+    t.text    "hero_journey"
+    t.integer "hero_id"
+    t.date    "release_date"
+  end
 
 end
