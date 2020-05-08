@@ -1,9 +1,19 @@
 class SessionsController < ApplicationController
 
-  configure do
-    set :public_folder, 'public'
-    set :views, 'app/views'
-  end
+	get '/login' do 
+		erb :"sessions/login"
+	end
+ 
+ 	post '/login' do
+ 		hero = Hero.find_by(name: params[:name])
+ 		if user && user.authenticate(params[:secret_identity])
+ 			session[:hero_id] = hero.id 
+ 			redirect "/movies"
+ 		else
+ 			redirect "/login"
+ 	end
+
+
 
 
 end
