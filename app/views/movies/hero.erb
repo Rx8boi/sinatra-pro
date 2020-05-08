@@ -1,0 +1,10 @@
+<h1> Here are the movies you've appeared in so far! </h1>
+<h2> Would you like to add another movie?</h2>
+
+<h2>Your latest movies:</h2>
+<ul>
+	<% @movies.each do |movie| %>
+	<li><a href="/movies/<%=movie.id"%>"><%= movie.name %> </a></li>
+	<% end %>
+	
+</ul>
