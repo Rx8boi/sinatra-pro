@@ -7,6 +7,9 @@
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+
+ 
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
@@ -53,7 +56,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 <body>
 
-<form action="/action_page.php" style="max-width:500px;margin:auto">
+<form action="/hero" style="max-width:500px;margin:auto">
   <h2>Register Form</h2>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -72,4 +75,11 @@ body {font-family: Arial, Helvetica, sans-serif;}
   
 
   <button type="submit" class="btn">Register</button>
+
+<% if @hero && @hero.errors %>
+<% @hero.errors.full_messages.each do |error| %>
+<p class="error"><%=error%></p>
+<% end %>
+<% end %>
+
 </form>
