@@ -1,0 +1,15 @@
+
+
+
+
+
+
+<h1> <%= @movie.character %> </h1>
+<p> <%= @movie.hero_journey %></p> 
+
+<h2>Delete this entry?</h2>
+<form method="POST" action="/movies/<%= @movie.id %>">
+<input type="hidden" id="hidden" name="_method" value="DELETE"><br></br>
+	<input type="submit" value="delete">
+
+</form>
