@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
   			session[:hero_id]
   		end
 
-  		def current_user
+  		def current_hero
   			@hero ||= Hero.find_by(id: session[:hero_id])
   		end
 

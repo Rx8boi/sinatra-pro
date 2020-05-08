@@ -3,13 +3,9 @@
 <h1> Edit the Hero's Journey! </h1>
 
 <form method="POST" action="/movies/<%= @movie.id %>">
-	<input type="hidden" id="hidden" name="_method" value="PATCH">
+	<input type="hidden" id="hidden" name="_method" value="patch">
 
-	<select name="hero_id">
-		<% @heroes.each do |hero| %>
-		<option value="<% hero.id%>"> <%= hero.name %></option>
-		<%end%>
-	</select><br></br>
+	<br></br>
 
 	Movie: <input type="text" name="name"><br></br>
 	Hero's Journey: <textarea name="hero_journey"></textarea><br></br>

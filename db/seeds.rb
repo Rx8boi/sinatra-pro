@@ -1,5 +1,5 @@
-Hero.create(name: "Tony Stark", secret_identity: "Iron-Man", bio: "genius, billionaire, playboy, philanthropist")
+Hero.create(name: "Tony Stark", secret_identity: "Iron-Man", password: "password", bio: "genius, billionaire, playboy, philanthropist")
 Movie.create(name: "Ironman", hero_journey: "From rich arm dealer to superhero", hero_id: 1)
 Movie.create(name: "Ironman 2", hero_journey: "Cures palladium illness & creates new metal", hero_id: 1)
-Hero.create(name: "Steve Rogers", secret_identity: "Captain America", bio: "Although he was given great power he stayed not a perfect soldier, but a good man.")
+Hero.create(name: "Steve Rogers", secret_identity: "Captain America", password: "password", bio: "Although he was given great power he stayed not a perfect soldier, but a good man.")
 Movie.create(name: "Captain America", hero_journey: "Fought hydra agents & liberated soliders in WW2", hero_id: 2)

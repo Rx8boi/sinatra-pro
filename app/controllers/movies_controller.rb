@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
 
 
 	post '/movies' do
-		movie = Movie.new(params)
+		movie = current_hero.movies.build(params)
 		if movie.save
 			redirect "/movies/#{movie.id}"
 		else
@@ -39,14 +39,14 @@ class MoviesController < ApplicationController
 		end
 	end
 
-	patch '/movies/id' do
+	patch '/movies/:id' do
 		#on each instance of a movie
 		@movie = Movie.find_by_id(params[:id])
-		params.delet("_method")
+		params.delete("_method")
 		if @movie.update(params)
-			rdirect "/movies/#{movie.id}"
+			redirect "/movies/#{@movie.id}"
 		else
-			redirect "/movies/#{movie.id}/edit"
+			redirect "/movies/#{@movie.id}/edit"
 		end
 	end
 
