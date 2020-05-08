@@ -3,6 +3,7 @@ class CreateMoviesTable < ActiveRecord::Migration
   	create_table :movie do |t|
   		t.string :name
   		t.text :hero_journey
+  		t.integer :hero_id
   		t.date :release_date
   	end
   end
