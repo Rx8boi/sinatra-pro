@@ -4,7 +4,7 @@ class HeroesController < ApplicationController
 	#check comes first
 	get '/heroes/signup' do
 		redirect_if_logged_in
-		erb :'/users/signup'
+		erb :"/heroes/signup"
 	end
 
 	#create & save
@@ -14,7 +14,7 @@ class HeroesController < ApplicationController
 		session[:hero_id] = @hero.id #logs them in already no re-route to log in screen
 		redirect '/posts'
 		else #sign in failed *retry at login*
-		erb :'/users/signup'
+		erb :"/heroes/signup"
 		end
 	end
 
