@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
  
  	post '/login' do
  		hero = Hero.find_by(name: params[:name])
+ 		binding.pry
  		if hero && hero.authenticate(params[:secret_identity])
  			session[:hero_id] = hero.id 
  			redirect "/movies"
