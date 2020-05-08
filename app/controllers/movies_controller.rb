@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
 		end
 		@movies = Movie.all
 		erb :"/movies/index"
+	end
 
 	get '/movies/new' do
 		#on the heroes movie page <- post login
@@ -25,7 +26,18 @@ class MoviesController < ApplicationController
 		end
 	end
 
-	
+	#edit needs to come before id route
+
+	get '/posts/:id/edit' do
+		redirect_if_not_logged_in
+		@heroes = Hero.all
+		@movie = Movie.find_by_id(params[:id])
+		if @movie.hero.id == current_hero.id
+			erb :"/movies/edit"
+		else
+			redirect "/movies"
+		end
+	end
 
 	get '/movies/id' do
 		#on each instance of a movie
