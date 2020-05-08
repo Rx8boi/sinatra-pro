@@ -39,10 +39,31 @@ class MoviesController < ApplicationController
 		end
 	end
 
-	get '/movies/id' do
+	patch '/movies/id' do
 		#on each instance of a movie
-		erb :'/movies/#{id}'
+		@movie = Movie.find_by_id(params[:id])
+		params.delet("_method")
+		if @movie.update(params)
+			rdirect "/movies/#{movie.id}"
+		else
+			redirect "/movies/#{movie.id}/edit"
+		end
 	end
 
+	get '/movies/:id' do
+		redirect_if_not_logged_in
+		@movie = Movie.find_by_id(params["id"])
+		erb :"/movies/show"
+	end
+
+	delete '/movies/:id' do
+		@movie = Movie.find_by_id(params[:id])
+		if @movie.hero.id == current_hero.id
+			@movie.destroy
+			redirect "/movies"
+		else
+			redirect "/movies"
+		end
+	end
 
 end
